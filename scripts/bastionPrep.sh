@@ -101,6 +101,7 @@ echo $(date) " - System update complete"
 # Install base packages and update system to latest packages
 echo $(date) " - Install base packages"
 yum -y install wget git net-tools bind-utils iptables-services bridge-utils bash-completion httpd-tools kexec-tools sos psacct
+yum -y install java-1.8.0-openjdk-headless-1.8.0.191.b12
 yum -y install ansible
 yum -y update glusterfs-fuse
 echo $(date) " - Base package installation complete"

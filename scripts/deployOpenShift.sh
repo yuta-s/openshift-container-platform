@@ -384,6 +384,13 @@ openshift_logging_kibana_nodeselector={"node-role.kubernetes.io/infra":"true"}
 openshift_logging_curator_nodeselector={"node-role.kubernetes.io/infra":"true"}
 openshift_logging_master_public_url=https://$MASTERPUBLICIPHOSTNAME
 
+# Container image to use for glusterfs pods
+openshift_storage_glusterfs_image="registry.redhat.io/rhgs3/rhgs-server-rhel7:v3.11"
+# Container image to use for glusterblock-provisioner pod
+openshift_storage_glusterfs_block_image="registry.redhat.io/rhgs3/rhgs-gluster-block-prov-rhel7:v3.11"
+# Container image to use for heketi pods
+openshift_storage_glusterfs_heketi_image="registry.redhat.io/rhgs3/rhgs-volmanager-rhel7:v3.11"
+
 # host group for masters
 [masters]
 $MASTER-[0:${MASTERLOOP}]
